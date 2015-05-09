@@ -1,0 +1,17 @@
+final RippleBackground rippleBackground=(RippleBackground)findViewById(R.id.content);
+
+        ImageView imageView=(ImageView)findViewById(R.id.centerImage);
+        imageView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                //creating a toggle
+                if (rippleBackground.isRippleAnimationRunning())
+                {
+                   rippleBackground.stopRippleAnimation();
+                }
+                else
+                {
+                    rippleBackground.startRippleAnimation();
+                }
